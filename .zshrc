@@ -93,9 +93,10 @@ export CXXFLAGS=$CFLAGS
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias pushall="git remote | xargs -L1 git push --all"
+alias log="tail -n 15 /var/log/messages" 
 alias fm="nemo --no-desktop"
 alias radioclassique="vlc /home/nop-90/Bureau/RadioClassique.xspf"
 alias mountU="sudo mount /dev/sdb3 /mnt/Utilisateurs"
 alias configi3="nvim /home/nop-90/.config/i3/config"
 alias configi3bar="nvim /home/nop-90/.config/i3/i3status.py"
-export MONGO_URL=mongodb://localhost:27017/dashboard

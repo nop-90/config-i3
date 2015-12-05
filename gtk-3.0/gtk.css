@@ -1,0 +1,4 @@
+.nemo-desktop.nemo-canvas-item {
+color: #FFFFFF;
+text-shadow: 1px 1px @desktop_item_text_shadow;
+}
