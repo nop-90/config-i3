@@ -1,0 +1,24 @@
+# See: /usr/share/doc/mpd/mpdconf.example
+
+pid_file "/home/nop-90/.config/mpd/mpd.pid"
+db_file "/home/nop-90/.config/mpd/mpd.db"
+state_file "/home/nop-90/.config/mpd/mpdstate"
+playlist_directory "/home/nop-90/.config/mpd/playlists"
+sticker_file "/home/nop-90/.config/mpd/sticker.sql"
+music_directory "/run/media/nop-90/Data/Downloads/Musiques"
+bind_to_address "192.168.1.5"
+auto_update "yes"
+user "nop-90"
+
+audio_output {
+    type "alsa"
+    name    "equal"
+    device  "plug:plugequal"
+    mixer_type      "software"
+}
+audio_output {
+        type "fifo"
+        name "FIFO"
+        path "/tmp/mpd.fifo"
+        format "44100:16:2"
+}

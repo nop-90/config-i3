@@ -1,0 +1,7 @@
+mpd_host = "nop-90.net"
+mpd_port = "6600"
+mpd_music_dir = "/home/user/Music"
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_output_name = "FIFO"
+visualizer_sync_interval = "15"
+visualizer_type = "spectrum"
