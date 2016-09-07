@@ -73,15 +73,14 @@ else
 fi
 
 # Compilation flags
-export ARCHFLAGS="-march=amdfam10 -O2"
+export ARCHFLAGS="-march=skylake-avx512 -O2"
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/id_rsa"
 
 # personal vars
 export LIBVA_DRIVER_NAME=vdpau
-export VDPAU_DRIVER=r600
-export CFLAGS="-march=amdfam10 -O2"
+export CFLAGS="-march=skylake-avx512 -O2"
 export XDG_RUNTIME_DIR=/var/run/user/1000
 export CXXFLAGS=$CFLAGS
 
@@ -93,10 +92,11 @@ export CXXFLAGS=$CFLAGS
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias firewall="tail -n15 /var/log/nftables"
+alias wifi="nmcli dev wifi list"
 alias pushall="git remote | xargs -L1 git push --all"
 alias log="tail -n 15 /var/log/messages" 
-alias fm="nemo --no-desktop"
+alias nemo="nemo --no-desktop"
 alias radioclassique="vlc /home/nop-90/Bureau/RadioClassique.xspf"
-alias mountU="sudo mount /dev/sdb3 /mnt/Utilisateurs"
 alias configi3="nvim /home/nop-90/.config/i3/config"
 alias configi3bar="nvim /home/nop-90/.config/i3/i3status.py"

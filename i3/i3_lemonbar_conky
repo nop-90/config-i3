@@ -13,12 +13,12 @@ conky.config = {
 conky.text = [[
 SYS\
 ${time %a %d %b %H:%M} \
-${cpu}%/${freq_g}Ghz/${execi 5 sensors | grep Vcore | cut -c18-21}V/${execi 5 sensors | grep CPUTIN | cut -c18-21}°C \
+${cpu}%/${freq_g}Ghz/${execi 5 sensors | grep temp1 | cut -c16-20}°C \
 ${mem}/${memperc} \
 ${fs_used_perc /} \
 ${fs_used_perc /home} \
-${if_up wlp5s0}${downspeedf wlp5s0} ${upspeedf wlp5s0} \
+${if_up wlp2s0}${downspeedf wlp5s0} ${upspeedf wlp5s0} \
 ${else}down down${endif} \
-${if_up enp6s0}${downspeedf enp6s0} ${upspeedf enp6s0} \
+${if_up enp3s0}${downspeedf enp6s0} ${upspeedf enp6s0} \
 ${else}down down${endif}\
 ]]
