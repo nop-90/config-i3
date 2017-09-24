@@ -57,11 +57,11 @@ plugins=(git archlinux adb bower colorize common-aliases cp docker-compose docke
 
 # User configuration
 
-export PATH="/usr/lib/ccache/bin/:/home/nop-90/Documents/sources/android/arm-cortex_a15-linux-gnueabihf/bin:/usr/lib/ccache/bin/:/home/nop-90/Documents/sources/android/arm-cortex_a15-linux-gnueabihf/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/android-sdk/tools:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/usr/share/webapps/:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/usr/share/webapps/"
+export PATH="/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/usr/share/webapps:/home/nop-90/.gem/ruby/2.4.0/bin:~/.local/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-. /usr/share/zsh/site-contrib/powerline.zsh
+. /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 # You may need to manually set your language environment
 export LANG=fr_FR.UTF-8
 export TERM=terminator
@@ -73,14 +73,15 @@ else
 fi
 
 # Compilation flags
-export ARCHFLAGS="-march=skylake-avx512 -O2"
+export ARCHFLAGS="-march=skylake -pipe -O2"
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/id_rsa"
 
 # personal vars
-export LIBVA_DRIVER_NAME=vdpau
-export CFLAGS="-march=skylake-avx512 -O2"
+export VDPAU_DRIVER=nvidia
+export LIBVA_DRIVER_NAME=i965
+export CFLAGS="-march=skylake -pipe -O2"
 export XDG_RUNTIME_DIR=/var/run/user/1000
 export CXXFLAGS=$CFLAGS
 
@@ -92,6 +93,7 @@ export CXXFLAGS=$CFLAGS
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ssh-rasp="ssh alarm@rasp"
 alias firewall="tail -n15 /var/log/nftables"
 alias wifi="nmcli dev wifi list"
 alias pushall="git remote | xargs -L1 git push --all"

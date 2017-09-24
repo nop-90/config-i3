@@ -9,7 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 # wallpaper
-exec --no-startup-id "feh --bg-fill /home/nop-90/Pictures/wallpaper/switzerland.jpg"
+exec --no-startup-id "feh --bg-fill /home/nop-90/Pictures/wallpaper/The_Course_of_Empire_Consummation_Thomas_Cole_1835_1836.jpeg"
 set $mod Mod4
 
 #Colors
@@ -131,7 +131,8 @@ bindsym $mod+Shift+F10 exec i3lock -c 000000 && systemctl suspend
 bindsym $mod+F12 exec systemctl suspend
 
 # Enable second monitor
-bindsym $mod+F2 exec xrandr --output HDMI2 --auto --left-of eDP1
+bindsym $mod+F2 exec xrandr --output HDMI2 --auto --right-of eDP1
+bindsym $mod+Shift+F2 exec xrandr --output HDMI2 --auto --same-as eDP1
 
 # change focus
 bindsym $mod+j focus left

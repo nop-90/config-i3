@@ -5,7 +5,6 @@ set termencoding=utf-8
 set fileformat=unix
 set autoindent
 set laststatus=2
-set background=dark
 set showcmd
 :helptags $HOME/.config/nvim/doc
 set smartindent
@@ -23,29 +22,25 @@ set backupdir=$HOME/.config/nvim/backups
 set history=1000
 set undolevels=1000
 set completeopt=menuone,menu,longest,preview
+syntax on
 map <F7> :make<CR>
 noremap <F6> :%!xxd<CR>
 noremap <F8> :%!xxd -r<CR>
-au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
-map <c-f> :call JsBeautify()<cr>
-autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
-autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
-autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+map <C-n> :NERDTreeToggle<CR>
 filetype off
 call pathogen#infect()
 call pathogen#helptags()
 filetype plugin on
 filetype plugin indent on
-syntax on
+
+autocmd BufNewFile,BufRead *.adoc set syntax=asciidoc
+autocmd BufRead,BufNewFile *.json set filetype=json
+autocmd BufRead,BufNewFile *.asm,*.nasm set syntax=asmx86_64
+autocmd BufRead,BufNewFile *.arm set syntax=avr
+autocmd BufRead,BufNewFile *.js set syntax=javascript
+autocmd BufRead,BufNewFile *.py set syntax=python
+autocmd BufRead,BufNewFile *.php set syntax=php
 
 let g:python3_host_prog = '/usr/bin/python3'
 let g:loaded_python_provider = 1
 let g:pymode_python = 'python3'
-"python from powerline.vim import setup as powerline_setup
-"python powerline_setup()
-"python del powerline_setup
-
-call plug#begin('~/.config/nvim/plugged')
-Plug 'lervag/vimtex'
-Plug 'junegunn/vim-github-dashboard', { 'on': ['GHDashboard', 'GHActivity'] }
-call plug#end()
