@@ -1,0 +1,4 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/home/nop-90/Documents/cours/prog/poo'
+let g:netrw_dirhist_2='/home/nop-90/Documents/security/sources/network/RDP-Replay/replay'

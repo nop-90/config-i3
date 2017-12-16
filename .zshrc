@@ -57,7 +57,7 @@ plugins=(git archlinux adb bower colorize common-aliases cp docker-compose docke
 
 # User configuration
 
-export PATH="/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/usr/share/webapps:/home/nop-90/.gem/ruby/2.4.0/bin:~/.local/bin"
+export PATH="/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/android-sdk/emulator:/opt/android-sdk/platform-tools:/opt/android-sdk/tools/bin:/home/nop-90/.gem/ruby/2.4.0/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -94,6 +94,10 @@ export CXXFLAGS=$CFLAGS
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ssh-rasp="ssh alarm@rasp"
+alias ssh-node="ssh admin@node"
+alias ssh-ad="ssh admin@ad"
+alias rtlsdr_scanner="python2 -m rtlsdr_scanner"
+alias music-node="ncmpcpp -h 192.168.1.5"
 alias firewall="tail -n15 /var/log/nftables"
 alias wifi="nmcli dev wifi list"
 alias pushall="git remote | xargs -L1 git push --all"
@@ -102,3 +106,5 @@ alias nemo="nemo --no-desktop"
 alias radioclassique="vlc /home/nop-90/Bureau/RadioClassique.xspf"
 alias configi3="nvim /home/nop-90/.config/i3/config"
 alias configi3bar="nvim /home/nop-90/.config/i3/i3status.py"
+alias androids="ANDROID_EMULATOR_USE_SYSTEM_LIBS=1 android-studio"
+alias watch="watch --color"
