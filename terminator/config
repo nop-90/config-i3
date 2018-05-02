@@ -19,11 +19,11 @@
 [plugins]
 [profiles]
   [[default]]
-    background_color = "#3a4244"
+    background_color = "#670000"
     background_darkness = 0.86
     background_type = transparent
     cursor_color = "#c2ae00"
     font = Inconsolata-g for Powerline Medium 9
-    foreground_color = "#927fff"
+    foreground_color = "#fb9864"
     scrollback_lines = 8196
     use_system_font = False

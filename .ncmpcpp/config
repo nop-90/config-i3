@@ -1,6 +1,6 @@
-mpd_host = "nop-90.net"
+mpd_host = "127.0.0.1"
 mpd_port = "6600"
-mpd_music_dir = "/home/user/Music"
+mpd_music_dir = "/home/nop-90/Music"
 visualizer_fifo_path = "/tmp/mpd.fifo"
 visualizer_output_name = "FIFO"
 visualizer_sync_interval = "15"

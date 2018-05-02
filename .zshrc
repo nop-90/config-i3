@@ -9,7 +9,7 @@ fi
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="bullet-train"
+ZSH_THEME="blinks"
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
@@ -62,6 +62,7 @@ export PATH="/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/lib/jvm/default/b
 
 source $ZSH/oh-my-zsh.sh
 . /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
+source /usr/share/oh-my-zsh/themes/blinks.zsh-theme
 # You may need to manually set your language environment
 export LANG=fr_FR.UTF-8
 export TERM=terminator
@@ -79,11 +80,17 @@ export ARCHFLAGS="-march=skylake -pipe -O2"
 export SSH_KEY_PATH="~/.ssh/id_rsa"
 
 # personal vars
-export VDPAU_DRIVER=nvidia
+#export VDPAU_DRIVER=va_gl
+export QT_STYLE_OVERRIDE=adwaita
 export LIBVA_DRIVER_NAME=i965
 export CFLAGS="-march=skylake -pipe -O2"
 export XDG_RUNTIME_DIR=/var/run/user/1000
 export CXXFLAGS=$CFLAGS
+export XKB_DEFAULT_LAYOUT=fr
+export XKB_DEFAULT_MODEL=pc105
+export CUCKOO=~/Documents/security/malwares/cuckoo
+export WINEPREFIX=/home/nop-90/.wine
+#export WLC_DRM_DEVICE=card0
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -105,6 +112,5 @@ alias log="tail -n 15 /var/log/messages"
 alias nemo="nemo --no-desktop"
 alias radioclassique="vlc /home/nop-90/Bureau/RadioClassique.xspf"
 alias configi3="nvim /home/nop-90/.config/i3/config"
-alias configi3bar="nvim /home/nop-90/.config/i3/i3status.py"
 alias androids="ANDROID_EMULATOR_USE_SYSTEM_LIBS=1 android-studio"
 alias watch="watch --color"
